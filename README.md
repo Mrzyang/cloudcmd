@@ -72,15 +72,15 @@ http {
             index index.html index.htm;
         }
 		
-		#https://github.com/coderaiser/cloudcmd  start
-		location /cc {
-			proxy_pass http://127.0.0.1:8081;
-			proxy_http_version 1.1;
-			proxy_read_timeout 5000;
-			proxy_set_header Upgrade $http_upgrade;
-			proxy_set_header Connection "upgrade";
-		}
-		#https://github.com/coderaiser/cloudcmd  end
+	#https://github.com/coderaiser/cloudcmd  start
+	location /cc {
+		proxy_pass http://127.0.0.1:8081;
+		proxy_http_version 1.1;
+		proxy_read_timeout 5000;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection "upgrade";
+	}
+	#https://github.com/coderaiser/cloudcmd  end
     }
 }
 ```
