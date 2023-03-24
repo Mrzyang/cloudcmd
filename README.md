@@ -29,9 +29,16 @@ npm rebuild
 ```
 
 ### 2. 启动`Cloud Commander`
+安装npm依赖
+``` shell
+npm install
+```
+
+命令行启动
 ```shell
 node cloudcmd/bin/cloudcmd.mjs
 ```
+
 或者pm2守护该进程
 ```shell
 pm2 start cloudcmd/bin/cloudcmd.mjs
