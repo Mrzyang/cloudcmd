@@ -1,0 +1,34 @@
+{
+    "local": [
+        "edit",
+        "edit-file",
+        "edit-file-vim",
+        "edit-names",
+        "edit-names-vim",
+        "menu",
+        "view",
+        "help",
+        "markdown",
+        "config",
+        "contact",
+        "command-line",
+        "upload",
+        "operation",
+        "konsole",
+        "terminal",
+        "terminal-run",
+        "cloud",
+        "user-menu"
+    ],
+    "remote": [{
+        "name": "socket",
+        "version": "4.0.1",
+        "local": "/socket.io/socket.io.js",
+        "remote": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/{{ version }}/socket.io.js"
+    }],
+    "data": {
+        "FilePicker": {
+            "key": "AACq5fTfzRY2E_Rw_4kyaz"
+        }
+    }
+}
