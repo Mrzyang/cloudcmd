@@ -13,7 +13,7 @@ nodejs >= v16.19.0
 
 ## 启动步骤
 ### 1. 重新编译`node-pty`
-由于该项目依赖微软的`node-pty`(https://github.com/microsoft/node-pty),`node-pty`对nodejs版本有严格要求，不同nodejs版本上编译出来的`node-pty`在其他nodejs版本的平台上是无法运行的，所以这里需要重新编译`node-pty`。
+由于该项目依赖微软的`node-pty`(https://github.com/microsoft/node-pty),  `node-pty`对nodejs版本有严格要求，不同nodejs版本上编译出来的`node-pty`在其他nodejs版本的平台上是无法运行的，所以这里需要重新编译`node-pty`。
 
 #### 1.1 安装c++ 编译环境
 以下提供Ubuntu/Debian 安装命令，centos以及其他linux发行版请自行google
@@ -36,7 +36,7 @@ node cloudcmd/bin/cloudcmd.mjs
 ```shell
 pm2 start cloudcmd/bin/cloudcmd.mjs
 ```
-然后浏览器访问http://yourIP:8081不出意外就会显示相关页面。
+然后浏览器访问http://yourIP:8081,  不出意外就会显示相关页面。
 
 ### 3. nginx反向代理`Cloud Commander`(该步骤不是必要)
 #### 3.1 配置Cloud Commander全局路由前缀
