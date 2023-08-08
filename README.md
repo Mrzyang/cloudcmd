@@ -10,6 +10,7 @@ nodejs >= v16.19.0
 1. 前端页面已经编译好，无需执行`npm run build`重新编译。
 2. 默认端口为8081，可在`cloudcmd/json/config.json`中第16行进行更改。
 3. 自带`gritty`终端，无需全局安装`gritty `。
+4. 开启用户名密码认证，需要将`cloudcmd/json/config.json`文件中`auth`设置为`true`，`username`设置为自定义用户名，`password`要填`sha512WithRSAEncryption`算法处理过的字符串，建议全局安装cloudcmd后执行命令`cloudcmd --username name --password password --auth --save --no-server`，会在家目录下生成`~/.cloudcmd.json`文件，拷贝其中的`password`字段值到`cloudcmd/json/config.json`中对应位置，然后重启cloudcmd即可。如果是在docker容器部署的web网页中进行auth开启，由于会重启node进程从而导致整个容器重启，所以这样往往不会开启成功，甚至会无法登陆，因为你也不知道密码是啥，还是建议现在`cloudcmd/json/config.json`中把密码填好，再进行后续操作。补充一下，官方提供的默认用户名是`root`，密码是`toor`。
 
 ## 启动步骤
 ### 1. 重新编译`node-pty`
