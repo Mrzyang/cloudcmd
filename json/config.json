@@ -1,8 +1,8 @@
 {
     "name": "",
     "auth": false,
-    "username": "root",
-    "password": "2b64f2e3f9fee1942af9ff60d40aa5a719db33b8ba8dd4864bb4f11e25ca2bee00907de32a59429602336cac832c8f2eeff5177cc14c864dd116c8bf6ca5d9a9",
+    "username": "mrzyang",
+    "password": "31be3f40d53203f1450420e146b4b40ff13cafd9afc80f03159b7c5eda990ee2ce31232d04907029b646a93182b506fab7ac5f4644007717d481cb8ea2eb4d52",
     "algo": "sha512WithRSAEncryption",
     "editor": "edward",
     "packer": "tar",
