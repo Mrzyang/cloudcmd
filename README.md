@@ -17,12 +17,18 @@ nodejs >= v16.19.0
 由于该项目依赖微软的`node-pty`(https://github.com/microsoft/node-pty),  `node-pty`对nodejs版本有严格要求，不同nodejs版本上编译出来的`node-pty`在其他nodejs版本的平台上是无法运行的，所以这里需要重新编译`node-pty`。
 
 #### 1.1 安装c++ 编译环境
-以下提供Ubuntu/Debian 安装命令，centos以及其他linux发行版请自行google
+以下提供Ubuntu/Debian 安装命令
 ``` shell
 sudo apt update
 sudo apt install build-essential gdb
 sudo apt install cmake
 ```
+以下提供centos 7.x 安装命令，需要C++ 14支持
+```
+sudo yum install gcc gcc-c++ centos-release-scl devtoolset-7
+scl enable devtoolset-7 bash
+```
+其他linux发行版请自行google
 #### 1.2 rebuild `node-pty`
 ``` shell
 cd cloudcmd/node_modules/node-pty
