@@ -28,6 +28,23 @@ sudo apt install cmake
 sudo yum install gcc gcc-c++ centos-release-scl devtoolset-7
 scl enable devtoolset-7 bash
 ```
+貌似centos7的SCL源已经停止维护，参考https://github.com/weimeng23/CentOS-sources  添加阿里云SCL源，执行以下命令安装SCL
+```
+# 刷新缓存
+yum repolist && yum clean all && yum makecache
+# 安装scl-utils工具
+yum install -y scl-utils scl-utils-build
+# 安装 devtoolset（gcc 10 为例）
+yum install -y devtoolset-10
+# 启用 devtoolset-10
+scl enable devtoolset-10 bash
+# 查看版本确认
+g++ --version
+```
+如果你想永久启用新版 gcc/g++，可以将以下内容加入 ~/.bashrc
+```
+source /opt/rh/devtoolset-10/enable
+```
 其他linux发行版请自行google
 #### 1.2 rebuild `node-pty`
 ``` shell
